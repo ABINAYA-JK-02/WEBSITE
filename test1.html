@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            margin: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background-color: #fff; */
+            background: #dd6aa6;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #ee6595, #ee6595);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #ee6595, #ee6595);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+
+        .login-container {
+            background-color: #f45899;
+            border-radius: 8px;
+            height: 50%;
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow:
+                0px 0.7px 1.9px rgba(0, 0, 0, 0.036),
+                0px 1.6px 4.3px rgba(0, 0, 0, 0.052),
+                0px 2.8px 7.7px rgba(0, 0, 0, 0.064),
+                0px 4.7px 12.8px rgba(0, 0, 0, 0.076),
+                0px 7.7px 21.2px rgba(0, 0, 0, 0.088),
+                0px 13.4px 37px rgba(0, 0, 0, 0.104),
+                0px 29px 80px rgba(0, 0, 0, 0.14);
+        }
+
+        .login-form {
+            width: 70%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.8rem;
+
+        }
+
+        input,
+        button {
+            padding: 1rem;
+            width: 90%;
+            font-weight: bold;
+            border: none;
+            border-bottom: 2px solid transparent;
+            background-color: #cdcccc;
+            border-radius: 30px;
+        }
+
+        input:focus {
+            border-bottom: 2px solid #000000;
+            outline: none;
+        }
+
+        .submit-btn {
+            background-color: #bbb5b8;
+            width: 90%;
+            color: #0f0b0b;
+            border-radius: 30px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <form class="login-form" onsubmit="formdata(event)">
+            <!-- <form class="login-form"> -->
+            <input type="text" name="name" id="name" placeholder="Name">
+            <input type="text" name="email" id="email" placeholder="Email">
+            <input type="tel" name="phone" id="phone" placeholder="Phone">
+            <input type="password" name="password" id="password" placeholder="Password">
+            <input type="number" name="age" id="age" placeholder="Age">
+            <button type="submit" class="submit-btn">submit</button>
+            <!-- <button class="submit-btn" onclick="formdata()">Register</button> -->
+        </form>
+        
+    </div>
+</body>
+<script>
+    function formdata(e) {
+        e.preventDefault();
+        let name = document.getElementById("name").value
+        let email = document.getElementById("email").value
+        let phone = document.getElementById("phone").value
+        let password = document.getElementById("password").value
+        let age = document.getElementById("age").value
+        if (name !== "" && email !== "" && phone !== "" && password !== "" && age !== "") {
+            console.log("success!")
+        }
+        else {
+            console.log("empty files not allowed!")
+        }
+
+        //console.log(name)
+        // document.write(name)
+        const data = {
+            username: name,
+            useremail: email,
+            userphone: phone,
+            userpassword: password,
+            usertype: age >= 18 ? 'major' : 'minor'
+
+        }
+        const { username, usertype, useremail, userphone, userpassword } = data
+        console.log(useremail, usertype)
+    }
+    let data1 = [1, 2, 3, 4]
+    let data2 = ['a', 'b', 'c', 'd']
+    let data3 = [...data1, false, ...data2]
+    console.log(data3)
+</script>
+
+</html>

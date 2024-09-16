@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <style>
+
+body, h1, h2, h3, p, ul, li, form, input, textarea, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background: #f4f4f4;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #4CAF50;
+}
+
+.profile {
+    text-align: center;
+    padding: 50px 20px;
+    background: #fff;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #4CAF50;
+    transition: transform 0.3s;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1);
+}
+
+.about, .skills, .projects h2,.internships, .contact {
+    padding: 20px;
+    text-align: center;
+}
+
+.about h2, .skills h2, .projects h2, .internships h2, .contact h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #4CAF50;
+}
+
+.skills {
+    background: #fff;
+}
+
+.skill-bar {
+    margin: 10px 0;
+    text-align: left;
+}
+
+.skill-title {
+    font-weight: bold;
+}
+
+.skill-percentage {
+    float: right;
+}
+
+.skill-progress {
+    height: 8px;
+    background: #4CAF50;
+    border-radius: 5px;
+    transition: width 0.5s ease;
+}
+.projects {
+    background: #f4f4f4;
+    text-align: center;
+}
+
+.projects {
+    background: #fff;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.internships {
+    background: #f4f4f4;
+}
+
+.internship {
+    background: #fff;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-item {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-item i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.contact-item p {
+    margin: 0;
+}
+
+.contact-item a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .contact-info {
+        flex-direction: column;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#internships">Internships</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="profile" class="profile">
+        <div class="profile-info">
+            <img src="abi.png" alt="Profile Picture" class="profile-pic">
+            <h1>Abinaya</h1>
+            <p>Web Developer </p>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm Abinaya, a passionate web developer with a keen interest in creating user-friendly, aesthetically pleasing websites. With a background in both design and development, I strive to build solutions that are not only functional but also visually appealing.</p>
+        <p>I specialize in front-end development, and I'm skilled in technologies like HTML, CSS, and JavaScript. My goal is to leverage these skills to contribute to exciting projects and collaborate with innovative teams.</p>
+        <p>In my free time, I enjoy exploring new technologies and enhancing my skills through continuous learning.</p>
+    </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <div class="skill-bar">
+            <div class="skill-title">HTML</div>
+            <div class="skill-percentage">90%</div>
+            <div class="skill-progress" style="width: 90%;"></div>
+        </div>
+        <div class="skill-bar">
+            <div class="skill-title">CSS</div>
+            <div class="skill-percentage">80%</div>
+            <div class="skill-progress" style="width: 80%;"></div>
+        </div>
+        <div class="skill-bar">
+            <div class="skill-title">JavaScript</div>
+            <div class="skill-percentage">50%</div>
+            <div class="skill-progress" style="width: 70%;"></div>
+        </div>
+    </section>
+    <section id="projects" class="projects">
+        <h2>
+           projects
+        </h2>
+        <div class="projects">
+            <h3>Data breach analysis and notification system</h3>
+         <p>   The project focuses on developing a comprehensive Data Breach monitoring System designed to provide real-time detection ,analysis and response to unauthorized access ,breaches and alter the user.The objective of the proposed system is to develop a Data Breach Analyzer and Notification System using Zabbix, which provides real-time monitoring and alerting for potential data breaches. The devised system can monitor databases to detect suspicious activity, such as unauthorized access attempts or abnormal data transfers. Upon detecting such events, the system trigger alerts to notify administrators, allowing them to respond quickly and prevent data loss or system compromise. This solution enhances security and mitigates risks associated with data breaches.
+            This notification system leverages several technologies to achieve this goal. Zabbix is the core monitoring tool that tracks system metrics, performance, and security-related data across multiple hosts. Docker is used to host Zabbix on Windows environments, ensuring compatibility and ease of deployment. Additionally, Zabbix Agents are installed on Windows machines to collect specific system metrics, while the Zabbix Web Interface allows for centralized management, configuration, and monitoring via a browser.
+            This combination of technologies provides a scalable, flexible solution for detecting and responding to potential breaches. By using triggers, alerts, and historical logs, administrators can stay ahead of security threats and take immediate action when anomalies are detected. Integration with various notification methods, such as email and SMS, ensures timely responses, making this system a comprehensive solution for breach prevention and security management. </p>
+        </div>
+    </section>
+
+    <section id="internships" class="internships">
+        <h2>Internships</h2>
+        <div class="internship">
+            <h3>Internship in networking</h3>
+            <p>I have completed my internship in networking  .</p>
+        </div>
+        
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Details</h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <p>Email: sherlinshipra2004@gmail.com</p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <p>Phone: 6383568502</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 abinaya. All rights reserved.</p>
+    </footer>
+
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
